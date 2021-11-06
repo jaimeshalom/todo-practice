@@ -13,7 +13,7 @@ function CreateTodoButton() {
             className="CreateTodoButton"
             onClick={handleClick}
         >
-            +
+            ➕
         </button>
     )
 }

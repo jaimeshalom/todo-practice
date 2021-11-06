@@ -8,6 +8,7 @@ import { TodoForm } from "../TodoForm";
 import { CreateTodoButton } from '../CreateTodoButton';
 import { TodoError } from '../TodosError';
 import { TodoLoading } from '../TodoLoading';
+import { WithNoMatches } from "../WithNoMatches";
 import { EmptyTodos } from '../EmptyTodos';
 import { Modal } from '../Modal';
 
@@ -16,6 +17,7 @@ function AppUI() {
     const {
         error,
         loading,
+        searchValue,
         searchedTodos,
         completeTodo,
         deleteTodo,
@@ -32,7 +34,10 @@ function AppUI() {
           {loading && new Array(4).fill().map((item, index) => (
             <TodoLoading key={index} />
           ))}
-          {!error && !loading && !searchedTodos.length &&
+          {!error && !loading && !searchedTodos.length && searchValue &&
+            <WithNoMatches />
+          }
+          {!error && !loading && !searchedTodos.length && !searchValue &&
             <EmptyTodos />
           }
           {searchedTodos.map((todo, index) => (

@@ -20,35 +20,3 @@
     text-decoration: line-through;
     text-decoration-color: gray;
 }
-
-/* .Icon {
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    font-size: 1.6rem;
-    transition: all 0.2s;
-    width: 36px;
-    height: 28px;
-  }
-  
-  .Icon-check {
-
-  }
-  .Icon-check:hover {
-    background-color: rgba(0, 255, 0, 0.4);
-    border-radius: 50%;
-  }
-  .Icon-check--active {
-    background-color: rgba(0, 255, 0, 0.25);
-    border-radius: 50%;
-  }
-  
-  .Icon-delete {
-
-  }
-  .Icon-delete:hover {
-    background-color: rgba(255, 0, 0, 0.5);
-    border-radius: 50%;
-  } */
