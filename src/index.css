@@ -45,4 +45,6 @@ code {
   padding: 4rem 3.2rem;
   max-width: 500px;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
