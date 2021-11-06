@@ -1,16 +1,22 @@
 .CreateTodoButton{
-    width: 4.8rem;
-    height: 4.8rem;
-    border: 2px solid gray;
+
+    width: 5.2rem;
+    height: 5.2rem;
+    border: 1px solid gray;
     border-radius: 50%;
-    font-size: 3.2rem;
-    font-weight: lighter;
-    position: absolute;
+    font-size: 3rem;
+    font-weight: normal;
+
+    position: fixed;
     bottom: 2rem;
     right: 2rem;
+
     cursor: pointer;
     color: rgb(95, 95, 95);
     transition: all 0.1s;
+    /* z-index: 1; */
+    /* transform: rotate(0); */
+
 
     box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.2);
 
@@ -24,7 +30,7 @@
 }
 
 .CreateTodoButton:hover {
-
+    /* transform: rotate(224deg); */
     box-shadow: 3px 2px 10px 1px rgba(0, 0, 0, 0.2);
 }
 

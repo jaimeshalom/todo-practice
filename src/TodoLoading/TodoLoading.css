@@ -1,0 +1,52 @@
+.LoadingTodo__container {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    padding: 1.2rem;
+    font-size: 2rem;
+    border-radius: 0.8rem;
+    background-color: white;
+    margin-top: 0.8rem;
+    color: var(--main-text-color);
+}
+
+.LoadingTodo__text {
+    margin-left: 1.2rem;
+    color: rgb(27, 27, 27);
+    width: 100%;
+}
+
+.LoadingTodo__completeIcon,
+.LoadingTodo__deleteIcon {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.6rem;
+    transition: all 0.2s;
+    width: 36px;
+    height: 28px;
+    border-radius: 50%;
+}
+
+.LoadingTodo__container,
+.LoadingTodo__completeIcon,
+.LoadingTodo__deleteIcon {
+    background: linear-gradient(90deg, rgba(250, 250, 250, 1), rgb(190, 190, 190));
+    background-size: 400% 400%;
+    animation: loadingAnimation;
+}
+
+@keyframes loadingAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+    
+}
