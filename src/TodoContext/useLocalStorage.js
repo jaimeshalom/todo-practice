@@ -26,8 +26,8 @@ function useLocalStorage(itemName, initialValue) {
           setError(error);
         }
       }, 1000);
-      console.log("use effect")
-    }, []);
+      // console.log("use effect")
+    });
     
     const saveItem = (newItem) => {
       try {
