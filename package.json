@@ -2,7 +2,6 @@
   "name": "intro-react",
   "version": "0.1.0",
   "private": true,
-  "hompage": "https://jaimeshalom.github.io/todo-practice",
   "dependencies": {
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^11.2.7",
@@ -40,5 +39,6 @@
   },
   "devDependencies": {
     "gh-pages": "^3.2.3"
-  }
+  },
+  "homepage": "https://jaimeshalom.github.io/todo-practice"
 }
