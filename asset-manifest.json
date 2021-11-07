@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/todo-practice/static/css/main.801344a1.chunk.css",
+    "main.css": "/todo-practice/static/css/main.9884b2ef.chunk.css",
     "main.js": "/todo-practice/static/js/main.0ebde990.chunk.js",
     "main.js.map": "/todo-practice/static/js/main.0ebde990.chunk.js.map",
     "runtime-main.js": "/todo-practice/static/js/runtime-main.79eebe9a.js",
@@ -8,7 +8,7 @@
     "static/js/2.62f87171.chunk.js": "/todo-practice/static/js/2.62f87171.chunk.js",
     "static/js/2.62f87171.chunk.js.map": "/todo-practice/static/js/2.62f87171.chunk.js.map",
     "index.html": "/todo-practice/index.html",
-    "static/css/main.801344a1.chunk.css.map": "/todo-practice/static/css/main.801344a1.chunk.css.map",
+    "static/css/main.9884b2ef.chunk.css.map": "/todo-practice/static/css/main.9884b2ef.chunk.css.map",
     "static/js/2.62f87171.chunk.js.LICENSE.txt": "/todo-practice/static/js/2.62f87171.chunk.js.LICENSE.txt",
     "static/media/check.3f730dd4.svg": "/todo-practice/static/media/check.3f730dd4.svg",
     "static/media/delete.0fc293a3.svg": "/todo-practice/static/media/delete.0fc293a3.svg"
@@ -16,7 +16,7 @@
   "entrypoints": [
     "static/js/runtime-main.79eebe9a.js",
     "static/js/2.62f87171.chunk.js",
-    "static/css/main.801344a1.chunk.css",
+    "static/css/main.9884b2ef.chunk.css",
     "static/js/main.0ebde990.chunk.js"
   ]
 }
