@@ -27,7 +27,7 @@ form {
     text-align: center;
     padding: 1.2rem;
     height: 96px;
-    /* width: calc(100%-25px); */
+    width: 100%;
   }
   
   textarea::placeholder {
