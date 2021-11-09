@@ -11,11 +11,6 @@ function TodoProvider(props) {
         error,
     } = useLocalStorage('TODOS_V1', []);
 
-    const {
-        item: lastStoredKey,
-        saveItem: setLastStoredKey,
-    } = useLocalStorage('lastStoredKey', 0)
-
     const [searchValue, setSearchValue] = React.useState('');
 
     const [openModal, setOpenModal] = React.useState(false);
@@ -42,9 +37,8 @@ function TodoProvider(props) {
         newTodos.push({
             completed: false,
             text,
-            key: `todo${lastStoredKey}`,
+            key: Date.now(),
         });
-        setLastStoredKey(lastStoredKey + 1);
         saveTodos(newTodos);
     };
 
