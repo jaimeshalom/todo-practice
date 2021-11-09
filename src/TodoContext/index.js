@@ -29,10 +29,10 @@ function TodoProvider(props) {
     let searchedTodos = !searchValue.length > 0 
         ? todos
         : todos.filter(
-        todo => (
-            todo.text.toLowerCase().includes(
-                searchValue.toLowerCase()
-            )
+            todo => (
+                todo.text.toLowerCase().includes(
+                    searchValue.toLowerCase()
+                )
         )
     );
 
