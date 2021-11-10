@@ -9,9 +9,10 @@ import { TodoForm } from "../TodoForm";
 import { CreateTodoButton } from '../CreateTodoButton';
 import { TodoError } from '../TodosError';
 import { TodoLoading } from '../TodoLoading';
-import { WithNoMatches } from "../WithNoMatches";
+// import { WithNoMatches } from "../WithNoMatches";
 import { EmptyTodos } from '../EmptyTodos';
 import { Modal } from '../Modal';
+import { ChangeAlertWithStorageListener } from '../ChangeAlert';
 
 function App() {
   const {
@@ -27,11 +28,12 @@ function App() {
     openModal,
     addTodo,
     setOpenModal,
+    synchronizeTodos,
   } = useTodos();
 
   return (
     <React.Fragment>
-      <TodoHeader>
+      <TodoHeader loading={loading}>
         <TodoCounter
           totalTodos={totalTodos}
           completedTodos={completedTodos}
@@ -41,20 +43,31 @@ function App() {
           setSearchValue={setSearchValue}
         />
       </TodoHeader>
-      <TodoList>
-        {error &&
-          <TodoError />
+
+      <TodoList
+        error={error}
+        loading={loading}
+        searchText={searchValue}
+        searchedTodos={searchedTodos}
+        totalTodos={totalTodos}
+        onError={() => <TodoError />}
+        onLoading={() => <TodoLoading />}
+        onEmptyTodos={() => <EmptyTodos />}
+        onEmptySearchResult={(searchText) => 
+          <p>No hay resultados para {searchText}</p>
         }
-        {loading && new Array(4).fill().map((item, index) => (
-          <TodoLoading key={index} />
-        ))}
-        {!error && !loading && !searchedTodos.length && searchValue &&
-          <WithNoMatches />
-        }
-        {!error && !loading && !searchedTodos.length && !searchValue &&
-          <EmptyTodos />
-        }
-        {searchedTodos.map((todo) => (
+        // onWithNoMatches={() => <WithNoMatches />}
+        // render={todo => (
+        //   <TodoItem
+        //     key={todo.key}
+        //     text={todo.text}
+        //     completed={todo.completed}
+        //     onComplete={() => toggleTodo(todo.key)}
+        //     onDelete={() => deleteTodo(todo.key)}
+        //   />
+        // )}
+      >
+        {todo =>
           <TodoItem
             key={todo.key}
             text={todo.text}
@@ -62,7 +75,7 @@ function App() {
             onComplete={() => toggleTodo(todo.key)}
             onDelete={() => deleteTodo(todo.key)}
           />
-        ))}
+        }
       </TodoList>
 
       {!!openModal && (
@@ -80,6 +93,10 @@ function App() {
           setOpenModal={setOpenModal}
         />
       }
+
+      <ChangeAlertWithStorageListener
+        synchronize={synchronizeTodos}
+      />
     </React.Fragment>
   );
 }
