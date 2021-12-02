@@ -12,7 +12,7 @@ import { TodoLoading } from '../TodoLoading';
 // import { WithNoMatches } from "../WithNoMatches";
 import { EmptyTodos } from '../EmptyTodos';
 import { Modal } from '../Modal';
-import { ChangeAlertWithStorageListener } from '../ChangeAlert';
+import { ChangeAlert } from '../ChangeAlert';
 
 function App() {
   const {
@@ -94,7 +94,7 @@ function App() {
         />
       }
 
-      <ChangeAlertWithStorageListener
+      <ChangeAlert
         synchronize={synchronizeTodos}
       />
     </React.Fragment>
